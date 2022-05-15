@@ -23,6 +23,7 @@ import com.cg.entities.Course;
 import com.cg.services.CourseService;
 
 @CrossOrigin("*")
+//rest controlleer
 @RestController
 @RequestMapping("/edu/course")
 public class CourseController {

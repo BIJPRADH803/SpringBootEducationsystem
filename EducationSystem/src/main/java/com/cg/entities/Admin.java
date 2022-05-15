@@ -26,7 +26,7 @@ public class Admin {
 		super();
 	}
 
-	public Admin(final String userName, final String password) {
+	public Admin( String userName, String password) {
 		super();
 		this.userName = userName;
 		this.password = password;
@@ -36,7 +36,7 @@ public class Admin {
 		return adminId;
 	}
 
-	public void setAdminId(final int adminId) {
+	public void setAdminId( int adminId) {
 		this.adminId = adminId;
 	}
 
@@ -44,7 +44,7 @@ public class Admin {
 		return userName;
 	}
 
-	public void setUserName(final String userName) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 
@@ -52,7 +52,7 @@ public class Admin {
 		return password;
 	}
 
-	public void setPassword(final String password) {
+	public void setPassword( String password) {
 		this.password = password;
 	}
 

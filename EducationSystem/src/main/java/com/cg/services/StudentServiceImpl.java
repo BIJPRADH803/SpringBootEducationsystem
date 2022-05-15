@@ -68,7 +68,7 @@ public class StudentServiceImpl implements StudentService {
 
 		Optional<Student> optionalStudent = studentRepository.findById(studentId);
 
-		if (optionalStudent == null) {
+		if (optionalStudent.isEmpty() ) {
 			throw new ResourceNotFoundException("Student not exising with id: " + studentId);
 		}
 
@@ -91,7 +91,7 @@ public class StudentServiceImpl implements StudentService {
 		studentRepository.delete(student);
 
 	}
-
+//use isEmpty() , when using Optional Class
 	@Override
 	public Student updateStudent(Student student) {
 

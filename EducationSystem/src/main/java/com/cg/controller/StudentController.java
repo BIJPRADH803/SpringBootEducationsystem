@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.entities.Student;
 import com.cg.payload.StudentDTO;
 import com.cg.services.StudentService;
+
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/api")
@@ -30,11 +31,12 @@ public class StudentController {
 	private StudentService studentService;
 
 	@PostMapping("/student-login")
-	public ResponseEntity<Student> doStudentLogin(@RequestParam("username") final String username,
-			@RequestParam("password") final String password) {
+	public ResponseEntity<Student> doStudentLogin(@RequestParam("username") String username,
+			@RequestParam("password") String password) {
 
-		Student student = studentService.studentLogin(username, password);
-
+        Student student = studentService.studentLogin(username, password);
+		
+	
 		ResponseEntity<Student> responseEntity = new ResponseEntity<>(student, HttpStatus.OK);
 
 		return responseEntity;
@@ -85,9 +87,9 @@ public class StudentController {
 	}
 
 	@GetMapping("/get/{id}")
-	public ResponseEntity<?> fetchStudentById(@PathVariable("id") int studentId) {
+	public ResponseEntity<Object> fetchStudentById(@PathVariable("id") int studentId) {
 
-		ResponseEntity<?> responseEntity = null;
+		ResponseEntity<Object> responseEntity = null;
 		Student student = studentService.getStudentById(studentId);
 		responseEntity = new ResponseEntity<>(student, HttpStatus.OK);
 		return responseEntity;

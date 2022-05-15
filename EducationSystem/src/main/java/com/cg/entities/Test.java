@@ -39,7 +39,9 @@ public class Test implements Serializable {
 	private LocalDate testDate;
 
 	@JsonIgnore
+	
 	@OneToOne
+	//this is mapping one to one relationship
 	private Course course;
 
 	public int getTestId() {

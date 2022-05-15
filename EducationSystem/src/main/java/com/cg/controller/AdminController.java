@@ -20,17 +20,6 @@ public class AdminController {
 
 	@Autowired
 	private AdminService adminService;
-//
-//	@PostMapping("/login")
-//	public ResponseEntity<Admin> adminLogin(@RequestBody Admin admin) {
-//
-//		String username = admin.getUserName();
-//		String password = admin.getPassword();
-//
-//		Admin a = adminService.adminLogin(username, password);
-//
-//		return new ResponseEntity<Admin>(a, HttpStatus.OK);
-//	}
 
 	@PostMapping("/login")
 	public ResponseEntity<Admin> doAdminLogin(@RequestParam("username") final String username,
@@ -44,14 +33,3 @@ public class AdminController {
 
 	}
 }
-//@PostMapping("/student-login")
-//public ResponseEntity<Student> doStudentLogin(@RequestParam("username") final String username,
-//		@RequestParam("password") final String password) {
-//
-//	Student student = studentService.studentLogin(username, password);
-//
-//	ResponseEntity<Student> responseEntity = new ResponseEntity<>(student, HttpStatus.OK);
-//
-//	return responseEntity;
-//
-//}
